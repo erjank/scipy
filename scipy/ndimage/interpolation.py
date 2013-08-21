@@ -315,12 +315,13 @@ def affine_transform(input, matrix, offset=0.0, output_shape=None,
     """
     Apply an affine transformation.
 
-    The given matrix and offset are used to find for each point in the
-    output the corresponding coordinates in the input by an affine
-    transformation. The value of the input at those coordinates is
-    determined by spline interpolation of the requested order. Points
-    outside the boundaries of the input are filled according to the given
-    mode.
+    The matrix and offset corresponding to the inverse of the affine 
+    transformation matrix and offset passed to this function are used
+    to find for each point in the output the corresponding coordinates 
+    in the input by an affine transformation. The value of the input at 
+    those coordinates is determined by spline interpolation of the requested 
+    order. Points outside the boundaries of the input are filled according to
+    the given mode.
 
     Parameters
     ----------
